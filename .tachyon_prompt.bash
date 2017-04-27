@@ -51,7 +51,7 @@ function get_dir {
     }
   }'
 }
-
+export -f get_dir
 user=$(whoami)
 host=$(hostname)
 export PS1="$Yellow${user:0:6}$BWhite@${host:0:6}$Break$Cyan[\$(get_dir)]$Green\[(\$(git rev-parse --abbrev-ref HEAD 2> /dev/null))\]\n$Green:$Reset "
